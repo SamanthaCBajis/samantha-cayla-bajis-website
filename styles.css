@@ -272,3 +272,25 @@ footer {
     gap: 1rem;
   }
 }
+
+
+.float-in-image {
+    /* Initial state (hidden and below final position) */
+    opacity: 0;
+    transform: translateY(50px); /* Starts 50px below its final position */
+    
+    /* Apply the animation */
+    animation: floatIn 1.5s ease-out forwards; /* Name, duration, timing, fill mode */
+    animation-delay: 0.5s; /* Optional: delay the start of the animation */
+}
+
+@keyframes floatIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px); /* Start point */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* End point (original position) */
+    }
+}

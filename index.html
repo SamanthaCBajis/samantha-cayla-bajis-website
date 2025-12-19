@@ -10,10 +10,10 @@
 <body>
 <header>
         <h1>Samantha Cayla Bajis</h1>
-        <img src="assets/ME.jpeg" alt="A Picture of Samantha Cayla Bajis" width="200" height="250">
+        <img src="assets/ME.jpeg" alt="A Picture of Samantha Cayla Bajis" class="float-in-image" width="500" height="600">
         <p class="tagline">Front-End Web Developer | Dog Lover | Video Games | Creative Entrepreneur</p>
     </header>
-
+    
     <nav>
         <ul>
             <li><a href="#about">About ME</a></li>
@@ -109,37 +109,6 @@
         </div>
     </footer>
 
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('nav a').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            });
-        });
-
-        // Add active state to navigation
-        window.addEventListener('scroll', () => {
-            const sections = document.querySelectorAll('section');
-            const navLinks = document.querySelectorAll('nav a');
-            
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                if (scrollY >= sectionTop - 200) {
-                    current = section.getAttribute('id');
-                }
-            });
-
-            navLinks.forEach(link => {
-                link.style.color = '';
-                if (link.getAttribute('href').slice(1) === current) {
-                    link.style.color = 'var(--pink)';
-                }
-            });
-        });
-    </script>    
+     <script src="script.js"></script>
 </body>
 </html>
